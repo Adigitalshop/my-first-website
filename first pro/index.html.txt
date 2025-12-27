@@ -9,10 +9,14 @@
 <body>
 
 <header>
-  <h1>Cafe Herzliya</h1>
-  <p>קפה שכונתי חמים בלב הרצליה</p>
-  <img src="images/cafe.jpg" alt="בית הקפה שלנו" class="hero-img">
-  <a href="tel:0500000000" class="btn">📞 התקשרו עכשיו</a>
+  <div class="hero">
+    <img src="images/cafe.jpg" alt="בית הקפה שלנו" class="hero-img">
+    <div class="hero-text">
+      <h1>קפה איכותי בלב הרצליה</h1>
+      <p>בואו ליהנות ממאפים טריים ואווירה חמה</p>
+      <a href="tel:0500000000" class="btn">📞 התקשרו עכשיו</a>
+    </div>
+  </div>
 </header>
 
 <section class="about">
@@ -25,14 +29,69 @@
 
 <section class="menu">
   <h2>תפריט</h2>
-  <ul>
-    <li>אספרסו – ₪10</li>
-    <li>קפוצ'ינו – ₪14</li>
-    <li>קרואסון – ₪12</li>
-    <li>לטה – ₪15</li>
-    <li>עוגת שוקולד – ₪18</li>
-    <li>סלט טרי – ₪20</li>
-  </ul>
+  <div class="menu-grid">
+
+    <div class="menu-item">
+      <div class="overlay-wrapper">
+        <img src="images/espresso.jpg" alt="אספרסו">
+        <div class="item-text">
+          <h3>אספרסו – ₪10</h3>
+          <p>חזק, עשיר ועם ארומה שלא תשכחו</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="overlay-wrapper">
+        <img src="images/cappuccino.jpg" alt="קפוצ'ינו">
+        <div class="item-text">
+          <h3>קפוצ'ינו – ₪14</h3>
+          <p>קצף חלב משגע וטעם חלק ומלטף</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="overlay-wrapper">
+        <img src="images/croissant.jpg" alt="קרואסון">
+        <div class="item-text">
+          <h3>קרואסון – ₪12</h3>
+          <p>שמרים פריכים עם חמאה ריחנית</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="overlay-wrapper">
+        <img src="images/latte.jpg" alt="לטה">
+        <div class="item-text">
+          <h3>לטה – ₪15</h3>
+          <p>קפה עם חלב מוקצף בצורה מושלמת</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="overlay-wrapper">
+        <img src="images/chocolate_cake.jpg" alt="עוגת שוקולד">
+        <div class="item-text">
+          <h3>עוגת שוקולד – ₪18</h3>
+          <p>שוקולד עשיר, רך וממכר</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="overlay-wrapper">
+        <img src="images/salad.jpg" alt="סלט טרי">
+        <div class="item-text">
+          <h3>סלט טרי – ₪20</h3>
+          <p>תערובת ירקות טריים ורעננים</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section class="hours">
@@ -43,10 +102,14 @@
 <section class="gallery">
   <h2>גלריית תמונות</h2>
   <div class="images">
-    <img src="images/cafe1.jpg" alt="קפה חמים">
-    <img src="images/cafe2.jpg" alt="מאפים טריים">
-    <img src="images/cafe3.jpg" alt="פינה נעימה בבית הקפה">
+    <img src="images/cafe1.jpg" alt="פנים בית קפה">
+    <img src="images/cafe2.jpg" alt="דלפק עץ">
+    <img src="images/cafe3.jpg" alt="לוגו הבית קפה">
   </div>
+</section>
+
+<section class="call-to-action">
+  <a href="tel:0500000000" class="btn">📞 התקשרו עכשיו</a>
 </section>
 
 <section class="contact">
