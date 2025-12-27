@@ -8,87 +8,173 @@ body {
   line-height: 1.6;
 }
 
-/* header */
-header {
-  background: linear-gradient(135deg, #2c2c2c, #444);
-  color: white;
+/* Hero Section */
+.hero {
+  position: relative;
   text-align: center;
-  padding: 60px 20px;
-}
-header h1 {
-  font-size: 2.5rem;
-}
-header p {
-  font-size: 1.2rem;
-  margin: 10px 0 20px;
-}
-header .hero-img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-}
-header .btn {
-  display: inline-block;
-  background: #ff9800;
   color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s, transform 0.2s;
-}
-header .btn:hover {
-  background: #e68a00;
-  transform: translateY(-2px);
 }
 
-/* section כללי */
+.hero-img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  filter: brightness(60%);
+  border-radius: 10px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #556B2F;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* כפתורים */
+.btn {
+  display: inline-block;
+  background: #556B2F;
+  color: white;
+  font-weight: bold;
+  padding: 18px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #6B8E23;
+}
+
+/* Sections */
 section {
   background: white;
   margin: 30px auto;
   padding: 30px;
   border-radius: 10px;
-  max-width: 800px;
+  max-width: 1000px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
 }
+
 section h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
-/* תפריט */
-.menu ul {
+/* Menu Grid */
+.menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 0;
-  list-style: none;
-}
-.menu ul li {
-  background: #fff8e1;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* גלריית תמונות */
+.menu-item {
+  background: #f0f5e1;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Overlay */
+.overlay-wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-wrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(85, 107, 47, 0.8);
+  color: #fff;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay-wrapper:hover .item-text {
+  transform: translateY(0);
+}
+
+.item-text h3 {
+  margin: 5px 0;
+}
+
+.item-text p {
+  font-size: 0.9rem;
+}
+
+/* גלריה */
 .gallery .images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
+
 .gallery img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
-/* footer */
-footer {
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Call to Action מרכזי */
+.call-to-action {
   text-align: center;
+  margin: 40px auto;
+  clear: both;
+}
+
+/* Footer */
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
+  text-align: center;
   background: #222;
   color: white;
+}
+
+/* ריווח אחיד בין סקשנים */
+section + section {
+  margin-top: 30px;
 }
